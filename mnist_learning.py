@@ -45,13 +45,13 @@ np.random.seed(1)
 
 alpha = 0.0001
 hidden_layer_size = 64
-weights_0_1 = 2*np.random.random((784, hidden_layer_size)) - 1 
-weights_1_2 = 2*np.random.random((hidden_layer_size, hidden_layer_size)) - 1 
-weights_2_3 = 2*np.random.random((hidden_layer_size, 10)) - 1 
+weights_0_1 = 2*np.random.random((784, 128)) - 1 
+weights_1_2 = 2*np.random.random((128, 64)) - 1 
+weights_2_3 = 2*np.random.random((64, 10)) - 1 
 
 
 
-for iteration in range(30): 
+for iteration in range(6): 
     layer_3_error = 0
     for i in range(len(train_X)): 
         layer_0 = train_X[i]
